@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EquityHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        logogold: '#cd9901',
+                        textgold: '#9c8c44',
+                        textdark: '#766934',
+                        bgdark: '#f5f5f5'
+                    }
+                },
+                fontFamily: {
+                    heading: ['serif'],
+                    body: ['Montserrat', 'sans-serif'],
+                }
+            }
+        }
+    </script>
+
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- NAVBAR -->
+  <header class=" fixed top-0 left-0 w-full z-50 bg-white backdrop-blur-md shadow-sm text-xl">
+    <div class="mx-auto flex items-center justify-between px-6 py-4">
+  <!-- Logo -->
+  <div class="flex items-center space-x-2">
+    <img src="logo-hq.png" alt="EquityHub" class="h-24 w-24">
+    <span class="text-4xl font-bold text-logogold font-heading hidden lg:block">EquityHub</span>
+  </div>
+
+  <!-- Desktop Menu -->
+  <ul class="hidden lg:flex space-x-8 font-heading">
+    <li><a href="home.html" class="hover:text-textgold transition">Home</a></li>
+    <li><a href="about.html" class="hover:text-textgold transition">About Us</a></li>
+    <li><a href="equitysectors.html" class="font-bold text-textgold hover:text-textgold transition">Our Equity Sectors</a></li>
+    <li><a href="shares.html" class="hover:text-textgold transition">Buy Shares</a></li>
+    <li><a href="contact.html" class="hover:text-textgold transition">Contact</a></li>
+  </ul>
+
+  <!-- Desktop CTA -->
+  <a href="#" class="hidden lg:inline-block px-10 py-3 bg-textgold hover:bg-textdark text-white rounded-lg font-semibold transition font-heading">
+    Register
+  </a>
+
+  <!-- Mobile Menu Button -->
+  <button id="menu-btn" class="lg:hidden flex flex-col space-y-2 rounded-lg hover:bg-textgold p-4 hover:cursor-pointer transition duration-300 ease-in">
+    <span class="w-8 h-0.5 bg-black transition-all duration-300"></span>
+    <span class="w-8 h-0.5 bg-black transition-all duration-300"></span>
+    <span class="w-8 h-0.5 bg-black transition-all duration-300"></span>
+  </button>
+</div>
+
+<!-- Mobile Menu -->
+<ul id="mobile-menu" class="hidden flex flex-col space-y-4 font-heading px-6 py-4 bg-white shadow-md rounded-lg mt-2">
+  <li><a href="home.html" class="hover:text-textgold transition">Home</a></li>
+  <li><a href="about.html" class="hover:text-textgold transition">About Us</a></li>
+  <li><a href="equitysectors.html" class="font-bold text-textgold hover:text-textgold transition">Our Equity Sectors</a></li>
+  <li><a href="shares.html" class="hover:text-textgold transition">Buy Shares</a></li>
+  <li><a href="contact.html" class="hover:text-textgold transition">Contact</a></li>
+  <a href="#" class="px-10 py-3 bg-textgold hover:bg-textdark text-white rounded-lg font-semibold transition font-heading text-center">
+    Register
+  </a>
+</ul>
+  </header>
+
+  <script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const lines = menuBtn.querySelectorAll('span');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    
+    // Toggle animation
+    lines[0].classList.toggle('rotate-45');
+    lines[0].classList.toggle('translate-y-2');
+    lines[1].classList.toggle('opacity-0');
+    lines[2].classList.toggle('-rotate-45');
+    lines[2].classList.toggle('-translate-y-2');
+  });
+</script>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-300 py-12 px-4">
+    <div class="text-center text-white mt-8">&copy; 2025 EquityHub. All Rights Reserved.</div>
+  </footer>
+
+</body>
+</html>
