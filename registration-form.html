@@ -104,78 +104,117 @@
       </h2>
     </div>
 
-    <form class="space-y-6">
-      <!-- Name -->
-      <div class="grid md:grid-cols-2 gap-4">
-        <input type="text" placeholder="First Name" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
-        <input type="text" placeholder="Last Name" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
-      </div>
+    <form 
+  id="registrationForm"
+  action="https://formsubmit.co/kaywebsolutions4@gmail.com" 
+  method="POST" 
+  class="space-y-6 relative"
+>
+  <!-- Hidden config -->
+  <input type="hidden" name="_subject" value="New Registration Form Submission">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="https://luyandaKhawula.github.io/thank-you.html">
+  <input type="hidden" name="_captcha" value="false">
 
-      <!-- Address -->
-      <div class="space-y-3">
-        <input type="text" placeholder="Address Line 1" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
-        <input type="text" placeholder="Address Line 2" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
-        <div class="grid md:grid-cols-4 gap-4">
-          <input type="text" placeholder="City" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
-          <input type="text" placeholder="State / Province" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
-          <input type="text" placeholder="Postal Code" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
-          <select class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
-            <option>Select Country</option>
-            <option>South Africa</option>
-            <option>Other</option>
-          </select>
-        </div>
-      </div>
+  <!-- Name -->
+  <div class="grid md:grid-cols-2 gap-4">
+    <input type="text" name="first_name" placeholder="First Name" required class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
+    <input type="text" name="last_name" placeholder="Last Name" required class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
+  </div>
 
-      <!-- Contact Info -->
-      <div class="grid md:grid-cols-2 gap-4">
-        <input type="text" placeholder="Phone" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
-        <input type="email" placeholder="Email" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
-      </div>
+  <!-- Address -->
+  <div class="space-y-3">
+    <input type="text" name="address_line_1" placeholder="Address Line 1" required class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
+    <input type="text" name="address_line_2" placeholder="Address Line 2" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
+    <div class="grid md:grid-cols-4 gap-4">
+      <input type="text" name="city" placeholder="City" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
+      <input type="text" name="state" placeholder="State / Province" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
+      <input type="text" name="postal_code" placeholder="Postal Code" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
+      <select name="country" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
+        <option>Select Country</option>
+        <option>South Africa</option>
+        <option>Other</option>
+      </select>
+    </div>
+  </div>
 
-      <!-- Date + Gender -->
-      <div class="grid md:grid-cols-2 gap-4">
-        <input type="date" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
-        <select class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
-          <option>Gender</option>
-          <option>Male</option>
-          <option>Female</option>
-          <option>Other</option>
-        </select>
-      </div>
+  <!-- Contact Info -->
+  <div class="grid md:grid-cols-2 gap-4">
+    <input type="text" name="phone" placeholder="Phone" required class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
+    <input type="email" name="email" placeholder="Email" required class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
+  </div>
 
-      <!-- How did you hear -->
-      <div>
-        <input type="text" placeholder="How did you hear about us?" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
-      </div>
+  <!-- Date + Gender -->
+  <div class="grid md:grid-cols-2 gap-4">
+    <input type="date" name="dob" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
+    <select name="gender" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
+      <option>Gender</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+  </div>
 
-      <!-- Checkbox Group -->
-      <div class="space-y-2">
-        <p class="font-semibold text-gray-800">Companies that you would like to get information about:</p>
-        <div class="grid md:grid-cols-1 gap-x-8">
-          <label class="flex items-center space-x-2"><input type="checkbox" class="accent-textgold"><span>Cattle, sheep and goat farming (R1080/share)</span></label>
-          <label class="flex items-center space-x-2"><input type="checkbox" class="accent-textgold"><span>Broiler chicken house farming (R472.50/share)</span></label>
-          <label class="flex items-center space-x-2"><input type="checkbox" class="accent-textgold"><span>Laying Eggs Chicken farming (R472.50/share)</span></label>
-          <label class="flex items-center space-x-2"><input type="checkbox" class="accent-textgold"><span>Hatching Eggs Chicken farming (R270/share)</span></label>
-          <label class="flex items-center space-x-2"><input type="checkbox" class="accent-textgold"><span>Meat Products Processing factory (R405/share)</span></label>
-          <label class="flex items-center space-x-2"><input type="checkbox" class="accent-textgold"><span>Chicken Slaughtering Factory (R877.50/share)</span></label>
-          <label class="flex items-center space-x-2"><input type="checkbox" class="accent-textgold"><span>Consumer Goods Manufacturing (R1350/share)</span></label>
-          <label class="flex items-center space-x-2"><input type="checkbox" class="accent-textgold"><span>Milk Processing Factory (R810/share)</span></label>
-          <label class="flex items-center space-x-2"><input type="checkbox" class="accent-textgold"><span>Sunflower oil Manufacturing factory per share R405</span></label>
-          <label class="flex items-center space-x-2"><input type="checkbox" class="accent-textgold"><span>Maize Meal Processing factory per share R1687.50</span></label>
-          <label class="flex items-center space-x-2"><input type="checkbox" class="accent-textgold"><span>Vegetables, Sunflower and Maize farming per share R3375</span></label>
-          <label class="flex items-center space-x-2"><input type="checkbox" class="accent-textgold"><span>Cement Manufacturing factory per share R10.800</span></label>
-          <label class="flex items-center space-x-2"><input type="checkbox" class="accent-textgold"><span>Roof tile and Sheet manufacturing per share R135</span></label>
-          <label class="flex items-center space-x-2"><input type="checkbox" class="accent-textgold"><span>Floor ceramic tile plant per share R135</span></label>
-          <label class="flex items-center space-x-2"><input type="checkbox" class="accent-textgold"><span>Flour Processing factory,per share R1687.50</span></label>
-        </div>
-      </div>
+  <!-- How did you hear -->
+  <div>
+    <input type="text" name="referral_source" placeholder="How did you hear about us?" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-textgold focus:outline-none">
+  </div>
 
-      <!-- Submit -->
-      <button type="submit" class="w-full md:w-auto px-8 py-3 bg-textgold hover:bg-textdark text-white font-semibold rounded-lg transition duration-300 ease-in-out">
-        Submit Application
-      </button>
-    </form>
+  <!-- Checkbox Group -->
+  <div class="space-y-2">
+    <p class="font-semibold text-gray-800">Companies that you would like to get information about:</p>
+    <div class="grid md:grid-cols-1 gap-x-8">
+      <label class="flex items-center space-x-2"><input type="checkbox" name="interest[]" value="Cattle, sheep and goat farming" class="accent-textgold"><span>Cattle, sheep and goat farming (R1080/share)</span></label>
+      <label class="flex items-center space-x-2"><input type="checkbox" name="interest[]" value="Broiler chicken house farming" class="accent-textgold"><span>Broiler chicken house farming (R472.50/share)</span></label>
+      <label class="flex items-center space-x-2"><input type="checkbox" name="interest[]" value="Laying Eggs Chicken farming" class="accent-textgold"><span>Laying Eggs Chicken farming (R472.50/share)</span></label>
+      <label class="flex items-center space-x-2"><input type="checkbox" name="interest[]" value="Hatching Eggs Chicken farming" class="accent-textgold"><span>Hatching Eggs Chicken farming (R270/share)</span></label>
+      <label class="flex items-center space-x-2"><input type="checkbox" name="interest[]" value="Meat Products Processing factory" class="accent-textgold"><span>Meat Products Processing factory (R405/share)</span></label>
+      <label class="flex items-center space-x-2"><input type="checkbox" name="interest[]" value="Chicken Slaughtering Factory" class="accent-textgold"><span>Chicken Slaughtering Factory (R877.50/share)</span></label>
+      <label class="flex items-center space-x-2"><input type="checkbox" name="interest[]" value="Consumer Goods Manufacturing" class="accent-textgold"><span>Consumer Goods Manufacturing (R1350/share)</span></label>
+      <label class="flex items-center space-x-2"><input type="checkbox" name="interest[]" value="Milk Processing Factory" class="accent-textgold"><span>Milk Processing Factory (R810/share)</span></label>
+      <label class="flex items-center space-x-2"><input type="checkbox" name="interest[]" value="Sunflower oil Manufacturing" class="accent-textgold"><span>Sunflower oil Manufacturing factory per share R405</span></label>
+      <label class="flex items-center space-x-2"><input type="checkbox" name="interest[]" value="Maize Meal Processing" class="accent-textgold"><span>Maize Meal Processing factory per share R1687.50</span></label>
+      <label class="flex items-center space-x-2"><input type="checkbox" name="interest[]" value="Vegetables, Sunflower and Maize farming" class="accent-textgold"><span>Vegetables, Sunflower and Maize farming per share R3375</span></label>
+      <label class="flex items-center space-x-2"><input type="checkbox" name="interest[]" value="Cement Manufacturing" class="accent-textgold"><span>Cement Manufacturing factory per share R10.800</span></label>
+      <label class="flex items-center space-x-2"><input type="checkbox" name="interest[]" value="Roof tile and Sheet manufacturing" class="accent-textgold"><span>Roof tile and Sheet manufacturing per share R135</span></label>
+      <label class="flex items-center space-x-2"><input type="checkbox" name="interest[]" value="Floor ceramic tile plant" class="accent-textgold"><span>Floor ceramic tile plant per share R135</span></label>
+      <label class="flex items-center space-x-2"><input type="checkbox" name="interest[]" value="Flour Processing factory" class="accent-textgold"><span>Flour Processing factory, per share R1687.50</span></label>
+    </div>
+  </div>
+
+  <!-- Submit -->
+  <button type="submit" class="w-full md:w-auto px-8 py-3 bg-textgold hover:bg-textdark text-white font-semibold rounded-lg transition duration-300 ease-in-out">
+    Submit Application
+  </button>
+  
+ <div id="thankYouOverlay" class="hidden absolute inset-0 flex flex-col items-center justify-center bg-white bg-opacity-90 rounded-lg shadow-xl text-center p-6">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-green-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2l4-4m5 2a9 9 0 11-18 0a9 9 0 0118 0z" />
+    </svg>
+    <h2 class="text-2xl font-bold text-gray-800 mb-2">Thank You!</h2>
+    <p class="text-gray-600">Your application has been submitted successfully.</p>
+  </div>
+</form>
+
+<script>
+  const form = document.getElementById('registrationForm');
+  const thankYouOverlay = document.getElementById('thankYouOverlay');
+
+  form.addEventListener('submit', (e) => {
+    // Instantly show feedback
+    thankYouOverlay.classList.remove('hidden');
+    thankYouOverlay.classList.add('flex');
+    
+    // Optionally delay redirect slightly for a smoother feel
+    setTimeout(() => {
+      form.submit(); // continue submission to FormSubmit
+    }, 1000);
+    
+    // Prevent default only briefly so user sees confirmation
+    e.preventDefault();
+  });
+</script>
+
   </div>
 </section>
 
